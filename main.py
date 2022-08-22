@@ -9,9 +9,6 @@ from dateutil import parser
 path = './logs'
 dbname = 'TakyExport-' + str(datetime.date.today())
 
-print(path)
-print(dbname)
-
 con = sqlite3.connect(dbname + ".cpr")
 con.execute(
     "CREATE TABLE IF NOT EXISTS events (id INTEGER PRIMARY KEY AUTOINCREMENT, uid TEXT, type TEXT, message TEXT, source TEXT, time INTEGER)")
