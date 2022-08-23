@@ -1,5 +1,7 @@
 #### TakyToWintakReplay
-Script to turn Taky logs into a database for WinTAK Replay function.
+Script to turn [Taky](https://github.com/tkuester/taky) logs into a database for WinTAK Replay function.
+
+You must have cot_log enabled to get the logs required for this to work. 
 
 The script expects to find the logs under `./logs`.
 
