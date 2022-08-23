@@ -10,4 +10,4 @@ The script expects to find the logs under `./logs`.
 #### Limitations:
 * Any GeoChat will be discarded.
 * Any event before 2005 will be discarded.
-* It's extremely poorly written.
+* The word poop is mentioned four times in the source.. 
