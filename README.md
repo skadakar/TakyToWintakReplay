@@ -1,11 +1,11 @@
 #### TakyToWintakReplay
 Script to turn [Taky](https://github.com/tkuester/taky) COT logs into a database for WinTAK Replay function.
 
-You must have `cot_log` set to `true` and a log path specified to get the logs required for this to work. 
+You must have `cot_log` set to `true` and a `log_cot` path specified to get the logs required for this to work. 
+
+This outputs .COT files in the log directory, which can be parsed into a `cpr` database wintak can replay. 
 
 The script expects to find the logs under `./logs`.
-
-Run the script and find the output `cpr` file. Import into WinTAK to replay
 
 #### Limitations:
 * Any GeoChat will be discarded.
