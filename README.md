@@ -1,7 +1,7 @@
 #### TakyToWintakReplay
 Script to turn [Taky](https://github.com/tkuester/taky) logs into a database for WinTAK Replay function.
 
-You must have cot_log enabled to get the logs required for this to work. 
+You must have `cot_log` set to `true` and a log path specified to get the logs required for this to work. 
 
 The script expects to find the logs under `./logs`.
 
