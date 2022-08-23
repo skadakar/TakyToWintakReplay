@@ -64,11 +64,10 @@ def insert_events_database(list_of_lists):
         dbcot = str(elem[2])
         dbtype = str("cot")
         dbsource = str("*:4242:tcp")
-        print(dbseq, dbepoch, dbuid, dbcot[0:15], dbtype, dbsource)
         pooplist = [str(dbuid), str(dbtype), str(dbcot), str(dbsource), str(dbepoch)]
         con.execute("INSERT OR REPLACE INTO events values (NULL,?,?,?,?,?)", pooplist)
         seq = int(seq) + 1
     con.commit()
     print("Export done, " +str(seq) + " events added.")
 
-(insert_events_database((sort_unsorded_cots())))
+insert_events_database((sort_unsorded_cots()))
