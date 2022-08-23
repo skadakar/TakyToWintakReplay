@@ -4,6 +4,7 @@ import re
 import sqlite3
 from operator import itemgetter
 from re import search
+
 from dateutil import parser
 
 path = './logs'
@@ -49,8 +50,8 @@ def extract_cots_from_files():
 
 
 def sort_unsorded_cots():
-    input = extract_cots_from_files()
-    sortedinput = sorted(input, key=itemgetter(0))
+    inputcots = extract_cots_from_files()
+    sortedinput = sorted(inputcots, key=itemgetter(0))
     return sortedinput
 
 
@@ -58,7 +59,6 @@ def insert_events_database(list_of_lists):
     print("Export started")
     seq = 0
     for elem in list_of_lists:
-        dbseq = str(seq)
         dbepoch = elem[0]
         dbuid = str(elem[1])
         dbcot = str(elem[2])
@@ -68,6 +68,7 @@ def insert_events_database(list_of_lists):
         con.execute("INSERT OR REPLACE INTO events values (NULL,?,?,?,?,?)", pooplist)
         seq = int(seq) + 1
     con.commit()
-    print("Export done, " +str(seq) + " events added.")
+    print("Export done, " + str(seq) + " events added.")
+
 
 insert_events_database((sort_unsorded_cots()))
